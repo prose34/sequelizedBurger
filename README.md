@@ -1,10 +1,10 @@
-# Eat the Burger App!
+# Eat the Burger App! Sequelize Version
 
-Created during Week 14 of the SMU Coding Bootcamp. The goal was to create a burger logger with MySQL, Node, Express, Handlebars and a homemade ORM (yum!). The MVC design pattern was followed; using Node and MySQL to query and route data in the app, and Handlebars to generate HTML.
+Created during Week 15 of the SMU Coding Bootcamp. The goal was to create a burger logger with Sequelize, Node, Express, Handlebars and a homemade ORM. The MVC design pattern was followed; using Node and Sequelize to query and route data in the app, and Handlebars to generate HTML.
 
 ## Live Project Link
 
-https://radiant-basin-82331.herokuapp.com/burgers
+ADD NEW LIVE LINK!!
 
 ## Screen Shots
 
@@ -12,7 +12,7 @@ Maybe
 
 ## Technologies used
 - Node.js
-- MySQL
+- Sequelize - https://www.npmjs.com/package/sequelize
 - Handlebars - http://handlebarsjs.com/
 - body-parser NPM Package - https://www.npmjs.com/package/inquirer
 - express NPM Package - https://www.npmjs.com/package/express
