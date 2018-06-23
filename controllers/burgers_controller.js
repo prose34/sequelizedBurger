@@ -29,8 +29,9 @@ router.get("/burgers", function(req, res) {
     .then(function(dbBurger) {
     // into the main index, updating the page
       var hbsObject = {
-        burger: dbBurger
+        burgers: dbBurger
       };
+      console.log(hbsObject);
       return res.render("index", hbsObject);
     });
 });
@@ -53,7 +54,7 @@ router.post("/api/burgers/create", function(req, res) {
 
 
 // put route to devour a burger
-router.put("/api/burgers/update", function(req, res) {
+router.put("/api/burgers/update/:id", function(req, res) {
   // If we are given a customer, create the customer and give them this devoured burger
   if (req.body.customer) {
     db.Customer.create({
@@ -65,12 +66,12 @@ router.put("/api/burgers/update", function(req, res) {
           devoured: true
         }, {
           where: {
-            id: req.body.burger_id
+            id: req.params.id
           }
         });
       })
       .then(function(dbBurger) {
-        res.json("/");
+        res.redirect("/");
       });
   }
   // If we aren't given a customer, just update the burger to be devoured
@@ -79,11 +80,11 @@ router.put("/api/burgers/update", function(req, res) {
       devoured: true
     }, {
       where: {
-        id: req.body.burger_id
+        id: req.params.id
       }
     })
       .then(function(dbBurger) {
-        res.json("/");
+        res.redirect("/");
       });
   }
 });
